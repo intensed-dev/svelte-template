@@ -12,7 +12,10 @@ export default [
   {
     files: ['**/*.js', '**/*.ts', '**/*.svelte'],
     languageOptions: {
-      globals: globals.browser
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
     }
   },
   prettier
